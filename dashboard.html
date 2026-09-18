@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Accounts | Virgiana Credit Union</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="app">
+<div class="phone">
+<div id="homeView">
+  <header class="app-top">
+    <div class="status">
+      <button type="button" class="icon-btn" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <p class="app-name">Virgiana Credit Union</p>
+      <span class="status-spacer"></span>
+    </div>
+    <nav class="menu-sheet" id="menuSheet" hidden>
+      <a href="./dashboard.html">Accounts</a>
+      <a href="./transfer.html">Pay &amp; transfer</a>
+      <a href="./messages.html">Messages</a>
+      <a href="./index.html" id="signOut">Sign out</a>
+    </nav>
+    <div class="hello">
+      <div>
+        <h1 id="greet">Hi, Sandra</h1>
+        <p class="lede">Accounts</p>
+      </div>
+      <div class="who">
+        <button type="button" class="edit-ghost" id="editToggle" aria-label="Edit dashboard">·</button>
+        <span class="avatar" id="avatar">S</span>
+      </div>
+    </div>
+    <label class="name-opt edit-only">
+      Name
+      <input type="text" id="memberName" placeholder="Sandra Bullock" value="Sandra Bullock" maxlength="40" autocomplete="name">
+    </label>
+    <p class="lede cap-note edit-only">Balances editable. Max $1,000,000.</p>
+    <div class="cards" id="tiles"></div>
+    <div class="card-nav">
+      <div class="dots" id="dots"></div>
+      <button type="button" class="view-all" id="viewAll">View all</button>
+    </div>
+    <section class="kpis" id="kpis"></section>
+    <nav class="quick">
+      <a href="./transfer.html">
+        <i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13m-3-3 3 3-3 3M20 16H7m3 3-3-3 3-3"/></svg>
+        </i>
+        Transfer
+      </a>
+      <a href="./transfer.html">
+        <i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+        </i>
+        Deposit
+      </a>
+      <a href="./transfer.html">
+        <i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M12 9v.01M12 12v4"/></svg>
+        </i>
+        Pay
+      </a>
+      <a href="./messages.html">
+        <i>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H8l-3 3V6z"/></svg>
+        </i>
+        Message
+      </a>
+    </nav>
+  </header>
+
+  <section id="activity" class="tx">
+    <div class="tx-head">
+      <h2>Transactions</h2>
+      <span class="tx-dots" aria-hidden="true">···</span>
+    </div>
+    <div id="activityBody"></div>
+    <button type="button" class="see-more" id="seeMore">See more</button>
+  </section>
+
+  <section id="credit" class="credit-block">
+    <h2>Credit card</h2>
+    <div id="creditTiles"></div>
+  </section>
+</div>
+
+<section id="detailView" class="detail" hidden>
+  <header class="detail-bar">
+    <button type="button" class="back-link" id="backTx">← Transactions</button>
+    <h2>Details</h2>
+  </header>
+  <div id="detailBody"></div>
+</section>
+</div>
+<script src="./assets/app.js"></script>
+<script>renderDashboard();</script>
+</body>
+</html>
