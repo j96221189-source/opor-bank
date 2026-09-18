@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Pay &amp; transfer | Virgiana Credit Union</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/style.css?v=2">
+  <link rel="stylesheet" href="./assets/style.css?v=3">
 </head>
 <body class="app">
 <div class="phone">
@@ -27,10 +27,10 @@
   <label for="amount">Amount</label>
   <input id="amount" type="number" min="1" step="1" required>
   <button type="submit">Transfer</button>
-  <p class="ok" id="xferNote" hidden>Saved in this browser only.</p>
+  <p class="form-err" id="xferNote" hidden role="alert"></p>
 </form>
 </div>
-<script src="./assets/app.js"></script>
+<script src="./assets/app.js?v=3"></script>
 <script>renderTransfer();</script>
 </body>
 </html>
