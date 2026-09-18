@@ -1,4 +1,4 @@
-const KEY = "vtcu.demo.v5";
+const KEY = "vtcu.demo.v6";
 let editing = false;
 const MAX_BAL = 100000000;
 
@@ -30,14 +30,15 @@ function defaultState() {
       { id: "cc", name: "Credit card", kind: "x4419", bal: 0 },
     ],
     activity: [
-      { date: "Nov 25", fullDate: "November 25, 2025", desc: "YOUR TOWN CINEMA", acct: "Checking", amt: -7.5, tags: "Entertainment", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 25", fullDate: "November 25, 2025", desc: "GEORGES BBQ & PUB", acct: "Checking", amt: -37.25, tags: "Food", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 25", fullDate: "November 25, 2025", desc: "ATM DEPOSIT", acct: "Savings", amt: 37.25, tags: "Deposit", acctNo: "Savings #9031 YOUR TOWN ST" },
-      { date: "Nov 25", fullDate: "November 25, 2025", desc: "YOUR TOWN UTILITIES", acct: "Checking", amt: -76.46, tags: "Bills", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 25", fullDate: "November 25, 2025", desc: "EL GRAN RESTAURANTE", acct: "Checking", amt: -13.98, tags: "Entertainment, Food", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 24", fullDate: "November 24, 2025", desc: "LE PETITE CAFE", acct: "Checking", amt: -2.61, tags: "Food", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 22", fullDate: "November 22, 2025", desc: "PAYROLL", acct: "Checking", amt: 1860, tags: "Income", acctNo: "Checking #1842 YOUR TOWN ST" },
-      { date: "Nov 20", fullDate: "November 20, 2025", desc: "TOWN MARKET", acct: "Checking", amt: -54.2, tags: "Groceries", acctNo: "Checking #1842 YOUR TOWN ST" },
+      { date: "Sep 14, 2026", fullDate: "September 14, 2026", desc: "Outgoing Wire — Michael Rexroad", acct: "Checking", amt: -115000, tags: "Wire", acctNo: "Checking #1842" },
+      { date: "Sep 16, 2026", fullDate: "September 16, 2026", desc: "Real Estate Payment", acct: "Checking", amt: -18500, tags: "Bills", acctNo: "Checking #1842" },
+      { date: "Sep 15, 2026", fullDate: "September 15, 2026", desc: "Bank Transfer", acct: "Checking", amt: -7250, tags: "Transfer", acctNo: "Checking #1842" },
+      { date: "Sep 14, 2026", fullDate: "September 14, 2026", desc: "Contractor Payment", acct: "Checking", amt: -4800, tags: "Bills", acctNo: "Checking #1842" },
+      { date: "Sep 12, 2026", fullDate: "September 12, 2026", desc: "Credit Card Payment", acct: "Checking", amt: -3450, tags: "Card", acctNo: "Checking #1842" },
+      { date: "Sep 10, 2026", fullDate: "September 10, 2026", desc: "Cash Withdrawal", acct: "Checking", amt: -2000, tags: "ATM", acctNo: "Checking #1842" },
+      { date: "Sep 9, 2026", fullDate: "September 9, 2026", desc: "Insurance Payment", acct: "Checking", amt: -1875, tags: "Bills", acctNo: "Checking #1842" },
+      { date: "Sep 5, 2026", fullDate: "September 5, 2026", desc: "Account Deposit", acct: "Checking", amt: 15000, tags: "Deposit", acctNo: "Checking #1842" },
+      { date: "Sep 3, 2026", fullDate: "September 3, 2026", desc: "Wire Transfer", acct: "Checking", amt: -42000, tags: "Wire", acctNo: "Checking #1842" },
     ],
   };
 }
