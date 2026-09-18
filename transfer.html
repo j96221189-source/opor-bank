@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pay &amp; transfer | Virgiana Credit Union</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="app">
+<div class="phone">
+<header class="app-top short">
+  <div class="status">
+    <a class="icon-btn" href="./dashboard.html" aria-label="Back to accounts">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+    </a>
+    <p class="app-name">Virgiana Credit Union</p>
+    <span class="status-spacer"></span>
+  </div>
+  <h1 class="page-title">Pay &amp; transfer</h1>
+</header>
+<form class="tx form-pad" id="transferForm">
+  <label for="from">From</label>
+  <select id="from" required></select>
+  <label for="to">To</label>
+  <select id="to" required></select>
+  <label for="amount">Amount</label>
+  <input id="amount" type="number" min="1" step="1" required>
+  <button type="submit">Transfer</button>
+  <p class="ok" id="xferNote" hidden>Saved in this browser only.</p>
+</form>
+</div>
+<script src="./assets/app.js"></script>
+<script>renderTransfer();</script>
+</body>
+</html>
