@@ -1,6 +1,6 @@
-const KEY = "vtcu.demo.v4";
+const KEY = "vtcu.demo.v5";
 let editing = false;
-const MAX_BAL = 1000000;
+const MAX_BAL = 100000000;
 
 function requireAuth() {
   if (sessionStorage.getItem("oporBankUser") !== "sandra24") {
@@ -25,7 +25,7 @@ function defaultState() {
   return {
     memberName: "Sandra Bullock",
     accounts: [
-      { id: "chk", name: "Checking", kind: "x1842", bal: 1000000 },
+      { id: "chk", name: "Checking", kind: "x1842", bal: 100000000 },
       { id: "sav", name: "Savings", kind: "x9031", bal: 877000 },
       { id: "cc", name: "Credit card", kind: "x4419", bal: 0 },
     ],
@@ -408,7 +408,7 @@ function renderTransfer() {
       }
       const room = MAX_BAL - dst.bal;
       if (room <= 0) {
-        fail("Error. Destination is at the $1,000,000 maximum.");
+        fail("Error. Destination is at the $100,000,000 maximum.");
         return;
       }
       fail("Error. Transfer could not be completed.");
