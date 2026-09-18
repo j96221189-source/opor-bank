@@ -483,6 +483,12 @@ body.is-editing .bal-show { display: none; }
   font-weight: 700;
 }
 .ok { color: #1b6b3a; }
+.form-err {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #b42318;
+  font-weight: 600;
+}
 
 .detail { flex: 1; background: var(--bg); }
 .detail-bar {
