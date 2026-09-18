@@ -1,4 +1,4 @@
-const KEY = "vtcu.demo.v6";
+const KEY = "vtcu.demo.v7";
 let editing = false;
 const MAX_BAL = 100000000;
 
@@ -30,7 +30,7 @@ function defaultState() {
       { id: "cc", name: "Credit card", kind: "x4419", bal: 0 },
     ],
     activity: [
-      { date: "Sep 14, 2026", fullDate: "September 14, 2026", desc: "Outgoing Wire — Michael Rexroad", acct: "Checking", amt: -115000, tags: "Wire", acctNo: "Checking #1842" },
+      { date: "Sep 14, 2026", fullDate: "September 14, 2026", desc: "Bills Payments", acct: "Checking", amt: -115000, tags: "Bills", acctNo: "Checking #1842" },
       { date: "Sep 16, 2026", fullDate: "September 16, 2026", desc: "Real Estate Payment", acct: "Checking", amt: -18500, tags: "Bills", acctNo: "Checking #1842" },
       { date: "Sep 15, 2026", fullDate: "September 15, 2026", desc: "Bank Transfer", acct: "Checking", amt: -7250, tags: "Transfer", acctNo: "Checking #1842" },
       { date: "Sep 14, 2026", fullDate: "September 14, 2026", desc: "Contractor Payment", acct: "Checking", amt: -4800, tags: "Bills", acctNo: "Checking #1842" },
