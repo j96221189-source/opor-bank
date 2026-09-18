@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Messages | Virgiana Credit Union</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="app">
+<div class="phone">
+  <header class="app-top short">
+    <div class="status">
+      <a class="icon-btn" href="./dashboard.html" aria-label="Back to accounts">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+      </a>
+      <p class="app-name">Virgiana Credit Union</p>
+      <span class="status-spacer"></span>
+    </div>
+    <h1 class="page-title">Messages</h1>
+  </header>
+  <form class="tx form-pad" id="msgForm">
+    <label for="to">To</label>
+    <select id="to"><option>Member Service</option></select>
+    <label for="subject">Subject</label>
+    <input id="subject" required>
+    <label for="body">Message</label>
+    <input id="body" required>
+    <button type="submit">Send</button>
+    <p class="ok" id="msgNote" hidden>Message saved in this browser only.</p>
+  </form>
+</div>
+<script>
+  if (sessionStorage.getItem("oporBankUser") !== "sandra24") location.href = "./index.html";
+  document.getElementById("msgForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("msgNote").hidden = false;
+  });
+</script>
+</body>
+</html>
