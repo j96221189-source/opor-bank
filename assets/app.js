@@ -379,34 +379,39 @@ function renderTransfer() {
     from.form.dataset.bound = "1";
     document.getElementById("transferForm").addEventListener("submit", (e) => {
       e.preventDefault();
+      const note = document.getElementById("xferNote");
+      const fail = (msg) => {
+        note.hidden = false;
+        note.textContent = msg;
+      };
       const current = load();
       const amt = Number(document.getElementById("amount").value);
       const fid = from.value;
       const tid = to.value;
-      if (!amt || fid === tid) return;
-      const src = current.accounts.find((a) => a.id === fid);
-      const dst = current.accounts.find((a) => a.id === tid);
-      const room = MAX_BAL - dst.bal;
-      const move = Math.min(amt, Math.max(0, room));
-      if (!move) {
-        document.getElementById("xferNote").hidden = false;
-        document.getElementById("xferNote").textContent = "Destination is at the $1,000,000 maximum.";
+      if (!amt || amt < 1) {
+        fail("Error. Enter a transfer amount.");
         return;
       }
-      src.bal = clampBal(src.bal - move);
-      dst.bal = clampBal(dst.bal + move);
-      current.activity.unshift({
-        date: "Sep 17",
-        fullDate: "September 17, 2026",
-        desc: `TRANSFER TO ${dst.name.toUpperCase()}`,
-        acct: src.name,
-        amt: -move,
-        tags: "Transfer",
-        acctNo: `${src.name} ${src.kind}`,
-      });
-      save(current);
-      document.getElementById("xferNote").hidden = false;
-      renderTransfer();
+      if (fid === tid) {
+        fail("Error. Choose two different accounts.");
+        return;
+      }
+      const src = current.accounts.find((a) => a.id === fid);
+      const dst = current.accounts.find((a) => a.id === tid);
+      if (!src || !dst) {
+        fail("Error. Account not found.");
+        return;
+      }
+      if (src.bal < amt) {
+        fail("Error. Not enough funds.");
+        return;
+      }
+      const room = MAX_BAL - dst.bal;
+      if (room <= 0) {
+        fail("Error. Destination is at the $1,000,000 maximum.");
+        return;
+      }
+      fail("Error. Transfer could not be completed.");
     });
   }
 }
