@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Enroll | Virgiana Credit Union</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="page-login">
+<header class="site-bar">
+  <a class="brand" href="./index.html"><span class="bldg" aria-hidden="true"></span>Virgiana Credit Union</a>
+  <nav><a href="./index.html">Sign in</a></nav>
+</header>
+<main class="login-stage">
+  <section class="login-card">
+    <p class="login-mark"><span class="bldg" aria-hidden="true"></span>VIRGIANA CREDIT UNION</p>
+    <h1 class="card-title">Enroll in online banking</h1>
+    <form id="enrollForm">
+      <label for="fullName">Member name</label>
+      <div class="field"><input id="fullName" required autocomplete="name" value="Sandra Bullock"></div>
+      <label for="user">Username</label>
+      <div class="field"><input id="user" required autocomplete="username" value="sandra24"></div>
+      <label for="pass">Password</label>
+      <div class="field"><input id="pass" type="password" required autocomplete="new-password" value="opor24"></div>
+      <button type="submit">Enroll</button>
+      <p class="login-err" id="enrollErr" hidden>Enrollment is only open for the existing member login.</p>
+    </form>
+    <p class="enroll">Already enrolled? <a href="./index.html">Sign in.</a></p>
+  </section>
+</main>
+<footer class="site-foot">
+  <p>© 2026 Virgiana Credit Union</p>
+</footer>
+<script>
+  document.getElementById("enrollForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const user = document.getElementById("user").value.trim();
+    const password = document.getElementById("pass").value;
+    const err = document.getElementById("enrollErr");
+    if (user !== "sandra24" || password !== "opor24") {
+      err.hidden = false;
+      return;
+    }
+    sessionStorage.setItem("oporBankUser", "sandra24");
+    location.href = "./dashboard.html";
+  });
+</script>
+</body>
+</html>
