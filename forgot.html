@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Forgot password | Virgiana Credit Union</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="page-login">
+<header class="site-bar">
+  <a class="brand" href="./index.html"><span class="bldg" aria-hidden="true"></span>Virgiana Credit Union</a>
+  <nav><a href="./index.html">Sign in</a></nav>
+</header>
+<main class="login-stage">
+  <section class="login-card">
+    <p class="login-mark"><span class="bldg" aria-hidden="true"></span>VIRGIANA CREDIT UNION</p>
+    <h1 class="card-title">Reset your password</h1>
+    <form id="forgotForm">
+      <label for="user">Username</label>
+      <div class="field"><input id="user" required autocomplete="username"></div>
+      <button type="submit">Continue</button>
+    </form>
+    <p class="enroll" id="forgotNote" hidden>If that username is on file, a reset would be sent to the email on the account.</p>
+    <p class="enroll"><a href="./index.html">Back to sign in</a></p>
+  </section>
+</main>
+<footer class="site-foot">
+  <p>© 2026 Virgiana Credit Union</p>
+</footer>
+<script>
+  document.getElementById("forgotForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("forgotNote").hidden = false;
+  });
+</script>
+</body>
+</html>
